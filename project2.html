@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+        header {
+            background-color: rgb(20, 205, 3);
+            color: rgb(0, 134, 96);
+            padding: 10px 20px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin: 0 10px;
+        }
+        .nav-links li a {
+            color: bisque;
+            text-decoration: none;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .hero {
+            background: linear-gradient(to right, blue, green);
+            color: rgb(16, 89, 111);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .hero h1 span {
+            color: rgb(236, 189, 131);
+        }
+        .btn {
+            background: rgb(187, 69, 125);
+            color: rgb(228, 200, 208);
+            padding: 10px 20px;
+            margin-top: 20px;
+            display: inline-block;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .about {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .about-content img {
+            max-width: 200px;
+            border-radius: 100%;
+            margin: 20px;
+        }
+        .project {
+            padding: 40px 20px;
+            background: #e0d1a5;
+            text-align: center;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            background-color: burlywood;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+        .contact {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            background: #a5cdee;
+            color: beige;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #b67d7d;
+        }
+        footer {
+            background: #aa6c6c;
+            color: rgb(56, 124, 17);
+            padding: 10px;
+            text-align: center;
+        }
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: #b67b7b;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 200px;
+            }
+            .nav-links.show {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">My Portfolio</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Project">Projects</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        </nav>
+    </header>
+
+    <section id="Home" class="hero">
+        <h1>Hi Hello, I'm <span>Vinoth Kumar</span></h1>
+        <p>A Student Learning Web Development</p>
+        <a href="#Project" class="btn">View My Work</a>
+    </section>
+
+    <section id="About" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="Picture1.jpg" alt="profile photo">
+            <p>I am a student, fascinated by the world of technology and endless possibilities.
+               The ability to build websites and user-friendly web applications excites me,
+               and I enjoy exploring new tools and techniques.</p>
+        </div>
+    </section>
+
+    <section id="Project" class="project">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Project-1</h3>
+                <p>A Simple Website</p>
+            </div>
+            <div class="project-card">
+                <h3>Project-2</h3>
+                <p>JavaScript Quiz App</p>
+            </div>
+            <div class="project-card">
+                <h3>Project-3</h3>
+                <p>Personal Blog with CMS</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Contact" class="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <textarea id="message" placeholder="Your Message" required></tex
